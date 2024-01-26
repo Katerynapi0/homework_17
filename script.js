@@ -28,50 +28,50 @@ console.log(`Середнє арифметичне числових елемен
 /*2. Написати функцію doMath(x, znak, y), яка отримує 3 аргументи: числа x і y, рядок znak. 
 У змінній znak може бути: +, -, *, /, %, ^ (ступінь ).
 Вивести результат математичної дії, вказаної в змінній znak.Обидва числа і знак виходять від користувача.*/
-// let inputZnak = prompt(`Оберіть дію, яку хочете зробити: +, -, *, /, %, ^`);
-// let xNum = parseFloat(prompt(`Введіть перше число:`));
-// let yNum = parseFloat(prompt(`Введіть друге число:`));
+let inputZnak = prompt(`Оберіть дію, яку хочете зробити: +, -, *, /, %, ^`);
+let xNum = parseFloat(prompt(`Введіть перше число:`));
+let yNum = parseFloat(prompt(`Введіть друге число:`));
 
-// function doMath(x, znak, y){
-//   switch (znak){
-//     case '+':
-//     return x + y;
+function doMath(x, znak, y){
+  switch (znak){
+    case '+':
+    return x + y;
 
-//     case '-':
-//     return x - y;
+    case '-':
+    return x - y;
 
-//     case '*':
-//     return x * y;
+    case '*':
+    return x * y;
 
-//     case '/':
-//     if(y !== 0){
-//       return x / y;
-//     }else{
-//       return (`Ділення на 0 неможливе.`)
-//     }
+    case '/':
+    if(y !== 0){
+      return x / y;
+    }else{
+      return (`Ділення на 0 неможливе.`)
+    }
 
-//     case '%':
-//     if(y !== 0){
-//       return x % y;
-//     }else{
-//       return (`Ділення на 0 неможливе.`)
-//     }
+    case '%':
+    if(y !== 0){
+      return x % y;
+    }else{
+      return (`Ділення на 0 неможливе.`)
+    }
 
-//     case '^':
-//     if(y !== 0){
-//       return x ** y;
-//     }
-//     else{
-//       return 1;
-//     }
+    case '^':
+    if(y !== 0){
+      return x ** y;
+    }
+    else{
+      return 1;
+    }
 
-//     default:
-//       return (`Введено некоректне значення.`)
-//   }
-// }
+    default:
+      return (`Введено некоректне значення.`)
+  }
+}
 
-// let calculateResult = doMath(xNum, inputZnak, yNum);
-// console.log(`${calculateResult}`);
+let calculateResult = doMath(xNum, inputZnak, yNum);
+console.log(`${calculateResult}`);
 
 
 /*3. Написати функцію заповнення даними користувача двомірного масиву. 
@@ -103,16 +103,16 @@ console.log(userArray);
 /*4. Створити функцію, яка прибирає з рядка всі символи, які ми передали другим аргументом. 
 'func(" hello world", ['l', 'd'])' поверне нам "heo wor". 
 Вихідний рядок та символи для видалення задає користувач.*/
-// let userString = prompt(`Введдіть речення або слово:`);
-// let userRemoveLetter = prompt(`Введіть букви, які хочете видалити:`);
+let userString = prompt(`Введдіть речення або слово:`);
+let userRemoveLetter = prompt(`Введіть букви, які хочете видалити:`);
 
-// function removeLetters(inputStr, letterToRemove){
-//   for(let i = 0; i < letterToRemove.length; i++ ){
-//     let currentLetter = letterToRemove[i];
-//     inputStr = inputStr.split(currentLetter).join('');
-//   }
-//   return inputStr;
-// }
+function removeLetters(inputStr, letterToRemove){
+  for(let i = 0; i < letterToRemove.length; i++ ){
+    let currentLetter = letterToRemove[i];
+    inputStr = inputStr.split(currentLetter).join('');
+  }
+  return inputStr;
+}
 
-// let result = removeLetters(userString,  userRemoveLetter);
-// console.log(`${result}`);
+let result = removeLetters(userString,  userRemoveLetter);
+console.log(`${result}`);
